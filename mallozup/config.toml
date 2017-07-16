@@ -1,0 +1,4 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "#MalloZup: coding for Opensource and Linux"
+theme = "ananke"
