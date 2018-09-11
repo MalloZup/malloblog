@@ -1,8 +1,8 @@
 ---
-title: "#MalloZup: coding for Linux and Opensource"
-featured_image: '/images/gohugo-default-sample-hero-image.jpg'
-description: "To create and maintain is harder then destroy and rebuild, from a git commit somewhere in the openspace"
+title: "#MalloZup: Linux and Opensource"
+featured_image: '/images/index_palace.jpg'
+description: "La béatitude n'est pas la récompense de la vertu, mais la vertu elle-même. Spinoza Baruch"
 ---
 Hi, i work for @SUSE Linux and maintain several opensource projects. 
-I like to share ideas, Programming paradigm, Design Principles, Architecture and everything that help people maintain a codebase healty.
-I think coding is about people and maintaining software under unpredictables situations and continous changes : )
+
+Feel free to open an issue https://github.com/MalloZup/malloblog if you want to discuss more an article or contact me about an article.
