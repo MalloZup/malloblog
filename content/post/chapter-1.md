@@ -96,3 +96,22 @@ In golang you can do it with:
 ```bash
 go tool cover -html=profile.cov
 ```
+
+This is a real example of a file with real data.
+
+![codecoverage](/images/coverage.png)
+
+
+From this image we can have 2 interesting informations:
+
+#### 1) information analysis:
+The red lines show that the part of code is not covered.
+So i started my analysis, which end up that we don't cover the network bridge mode in our testacc  at the time i am writing this post.
+
+This example shows that the code coverage can give you precious insights for discover **risky code**, or code that can be buggy if refactored in future.
+
+#### 2) information analysis:
+
+If you look again at the image, you will see that also the `return errror` part of code are red, aka uncovered.
+
+This is a sign that for that part of code we don't have negative tests, tests were we expect a failure. 
