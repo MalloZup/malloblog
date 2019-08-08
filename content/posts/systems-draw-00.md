@@ -31,9 +31,9 @@ We have 3 layers of abstraction:
   Imagine an user calling `terraform apply`, the flow would be from the right to `the left of the image 
    (applying terraform protocols of provider-right, the terraform-libvirt  implement this interface and call libvirt functions).
 
- This flow can be bi-directional. When you create the first time a resource, it is from right to left. But when updating existing infrastructure it is from left to right (reading existing resources).
+ The data flow can be bi-directional. When you create the first time a resource, it is from right to left. But when updating existing infrastructure it is from left to right (reading existing resources).
 
- Here is simplified because in more complex scenarios the provider is reading, creating resources at same time. So it switch from left to right or from right to left.
+ Here is simplified because in more complex scenarios the provider is reading, creating resources at same time, so it switch from left to right or from right to left.
 
 
 ### 2) Second perspective (number 2 in the picture) the internal structure of the provider, layout:
@@ -44,9 +44,9 @@ We have 3 layers of abstraction:
      
   * The [Domain.go](https://github.com/dmacvicar/terraform-provider-libvirt/blob/master/libvirt/domain.go) contains function which will be called by the terraform create/destroy function etc.. The function are mostly using either libvirt-xml or libvirt go libraries 
 
-  * Finally the [resource_libvirt_domain.go]((https://github.com/dmacvicar/terraform-provider-libvirt/blob/master/libvirt/resource_libvirt_domain.go) implement the Create/Destroy/Update etc functions which are the common protocol which a Terraform Provider need to respect and implement.
+  * Finally the [resource_libvirt_domain.go](https://github.com/dmacvicar/terraform-provider-libvirt/blob/master/libvirt/resource_libvirt_domain.go) implement the Create/Destroy/Update etc functions which are the common protocol which a Terraform Provider need to respect and implement.
 
-  The `provider.go` file encapsulate all resources registration, so it is the "last" abstraction. https://github.com/dmacvicar/terraform-provider-libvirt/blob/master/libvirt/provider.go#L10 
+  The [provider.go]( https://github.com/dmacvicar/terraform-provider-libvirt/blob/master/libvirt/provider.go#L10) file encapsulate all resources registration, so it is the "last" abstraction level, a part ot the `main.go`, which call the function contained in this file.
 
   Note: the Domain is just an example resource, the same reasoning apply for other resource like network etc.
 
