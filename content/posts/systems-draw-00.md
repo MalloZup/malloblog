@@ -20,7 +20,7 @@ Here is an humble tentative:
 
 We have 3 layers of abstraction: 
 
-### 1)  Number 1 in the picture:  the data model and flow in highlevel manner:
+### First perspective (number 1 in the picture),  the data model and flow in highlevel manner:
 
   * terraform-libvirt take as `input` an HCL file, and transform it in `XML` format which will then consumed by Libvirt. The terraform-libvirt is in the middle as translator of both worlds.
 
