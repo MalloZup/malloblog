@@ -8,7 +8,7 @@ canonifyurls = true
 
 [params]
     author = "Dario Maiocchi"
-    info = "$TITLE=\"Free software | remote developer | pragmatic descendant of Linux/Unix culture | I try to don't be a faker\""
+    info = "$TITLE=\"Free software | remote developer | pragmatic descendant of Linux/Unix culture | I try not to be a faker\""
     description = "Dario Maiocchi's personal website"
     keywords = "foss, lisp, linux, clojure and other stuff around software"
     footercontent = "free software, free thoughts"

@@ -17,3 +17,5 @@ For the future me to remember things :)
 # Deploy to webpage:
 
 Go to `public` and commit and push changes
+
+the webpage is here : https://github.com/MalloZup/MalloZup.github.io
