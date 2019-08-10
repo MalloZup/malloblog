@@ -22,7 +22,7 @@ I appreciate during some lightning talks, the courage of some people who spoke a
 
 Time just flowed naturally, it was not hectic. We had enough pauses, after each talk  we could share our opinions with others, and we shared a unique room, no parallelism during talks involved :)
 
-All this small details, thanks to the organisation has build a friendly atmosphere.
+All this small details, thanks to the organisation have build a friendly atmosphere.
 I have also appreciated the fact that we are trying to give an europeean athomsphere and culture to a conference happening in Europe;
 it might seems a truism, but is not. I think we were  not just imitating some others models, which perhaps are great elsewhere but they doesn't fit in Europe with is own identity.
 (Btw, this is also why I appreciate Clojure language and community for their courage to be non-conventional with perhaps other models (not only in coding))
