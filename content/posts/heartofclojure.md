@@ -31,7 +31,8 @@ I personally had the chance to talk in person with so many great developers, not
 
 We spoke about lot of things and we listened each others with a genuine interest. ( this isn't always granted, (especially in our tech world))
 
-I will not mention all the names of people I have met and discussed with, because either I will forget some of them and also putting some well known names or stating their X company, create from my perspective a phenomenon like [society of spectacle](https://en.wikipedia.org/wiki/The_Society_of_the_Spectacle) in IT, which i'm not a fun. Allthough, I have expressed my enthusiasm to people I admire for their engagement or ideas.
+I will not mention all the names of people I have met and discussed with, because either I will forget some of them and also putting some well known names or stating their X company, create from my perspective a phenomenon like [society of spectacle](https://en.wikipedia.org/wiki/The_Society_of_the_Spectacle) in IT, which i'm not a fun. Allthough, I have expressed my enthusiasm to people I admire for their engagement or ideas. But again, I might have also forgotten some of you there. :)
+
 
 **The Heart of Clojure conference was a real alternative and human warm conference.**
 Perhaps some of us think that free software and or opensource are the same thing, and they are obvious and something well known.
@@ -39,7 +40,7 @@ Everybody speak about it, and we know its dynamics already, right? :)
 
 In fact, I think lot of people share the same doubts with me about free software and its meaning, **suitenable organisation models** for individuals and contributors. 
 It is not only about money but how people can feel a value or a meaning with the software they do for helping others.
-There are lot of open questions, which find different answers in different countries and communities perhaps. Most of them doesn't have any answer yet in our current systems ( not only clojure).
+There are lot of open questions, which find different answers in different countries and communities perhaps. Most of them doesn't have any answer yet in our current systems ( not only clojure). But things are going forward!
 
 The most common error we can do is thinking we known already our world because we have some experience (or we think we have? :) )
 
