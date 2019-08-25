@@ -1,5 +1,5 @@
 +++ 
-date = 2019-08-15T14:13:26+02:00
+date = 2019-08-25T14:13:26+02:00
 title = "Systems Design: 01 nREPL clojure"
 description = "Unconventional systems architecture"
 +++
