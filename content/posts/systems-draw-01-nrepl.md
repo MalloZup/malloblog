@@ -1,17 +1,12 @@
 +++ 
-draft = true
 date = 2019-08-15T14:13:26+02:00
-title = "01-unconventional-systems-drawing: nREPL Clojure"
+title = "Systems Design: 01 nREPL clojure"
 description = "Unconventional systems architecture"
-slug = "" 
-tags = ["systems", "clojure",  "lisp"]
-categories = []
-externalLink = ""
-series = []
 +++
 
-## Snapshot of this blog:
+## Meta:
 This blog post is based on commit: https://github.com/nrepl/nrepl/commit/21a3200a5dee737efa0dca7529cd2b69b41c7644
+This the 2nd entry of unconventional systems design. 
 
 # nREPL
 
@@ -36,13 +31,13 @@ We can structure the picture in 7 key points:
 - 6) A Client of nREPL
 - 7) What is nREPL session
 
+`TIP:` For each point in the list, I will suggest you to look at the map first,  then read the description  and finally  relook the map with the new informations.
+
 
 ### 1) The architecture model of nREPL
 
 nREPL use a server/client model. 
-
-For simplicity I draw EMACS as client but it could be another client. (see other clients here: https://nrepl.org/nrepl/usage/clients.html)
-I will use CIDER/EMACS here for sake of simplicity but the same apply for other clients.
+We use emacs as client but it could be another client. (see other clients here: https://nrepl.org/nrepl/usage/clients.html)
 
 The highlevel definition from nREPL from upstream doc:
 
@@ -56,17 +51,17 @@ For people not familiar with REPL read [here](https://en.wikipedia.org/wiki/Read
 ### 2) How data flows in nREPL:
 
 nREPL is  message-oriented and asynchronous system.
-A message consist of a Clojure map with some common specification and abstractions.
+A message consist of a "clojure" map. The real format of this map is abstracted by the `transport`, which we will see later.
 
 The client on the picture(left side) is sending a message with `ID 10` to the server,  for "evaluating" "eval" some code. (The example in the picture is simplified)
 
 When you evaluate some code with your editor, e.g CIDER-EMACS sends to the NREPL server a message; the server respond with the value and a "status" of the operations.
 
-In the 2nd part we will analyze more in deep the specification of map, especially "op" operation field and the "session" field of the maps. ( see red color on the picture).
+We will analyze more in details the specification of map, especially "op" operation field and the "session" field of the maps. ( see red color on the picture).
 
 ### 3) Transport abstraction:
 
-The transport is an abstraction for providing some facility of the network layer.
+The transport is a common abstraction for providing some facility over the network layer.
 
 Nrepl uses Java [sockets](https://en.wikipedia.org/wiki/Network_socket).
 For encoding/decoding the message it uses by default the BENCODE format, but other are supperted.(For more info read this: https://nrepl.org/nrepl/design/transports.html)
@@ -74,6 +69,7 @@ For encoding/decoding the message it uses by default the BENCODE format, but oth
 The transport namespace is what you  will use/require when you develop a new custom middleware for nREPL.
 The transport are analog to RING adapters, https://github.com/ring-clojure/ring/wiki
 
+CODE is here: https://github.com/nrepl/nrepl/blob/master/src/clojure/nrepl/transport.clj
 
 ### 4) What is a nREPL server:
 
@@ -81,7 +77,7 @@ Everthing in nREPL is message driven and an important part of the message is the
 
 The "op" correspond to the operations that a client request the nREPL server to perform. It can be "eval" for evaluationg code, "interrupt" for interrupting a task, "load-file", etc. This all operation requested by your IDE client when you are using the REPL (e.g with CIDER or CALVA). If you require a new operation, you can extend it with middlewares.
 
-The middlewares provide a mechanism to react to specific message operations or new ones.
+The middlewares provide a mechanism to react to specific message operations.
 
 A nREPL server by default provide some basic functionality (built-in middlewares), like session, load-file etc. (see here for more details https://github.com/nrepl/nrepl/tree/master/src/clojure/nrepl/middleware and  this are supported by the [default-handler](https://github.com/nrepl/nrepl/blob/2b432c859c5a98b6e8c97338315bfaab2961641b/src/clojure/nrepl/server.clj#L88) )
 
@@ -89,7 +85,6 @@ A nREPL server can be extended, in our case we are using cider-nrepl (https://gi
 
 A middleware allow developer to extend nREPL basic functionality.
 You can read more here: https://nrepl.org/nrepl/design/middleware.html
-
 
 
 ### 5) nRepl Server lifecycle:
@@ -127,7 +122,7 @@ If you use Clojure and Clojurescript, Piggieback uses sessions to allow host a C
 
 I have just drawed an essential view of nREPL; some infos are also simplified for not going into much complexity.
 
-Thx to @bbatsov for answering some questions I had and providing a superb design and developer documentation to work with.
+Thx to @bbatsov for answering some questions, thx to all contributors and maintainers for providing a great design and developer documentation to work with.
 
 
 # Additional resources:
