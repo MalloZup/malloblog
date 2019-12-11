@@ -8,7 +8,7 @@ canonifyurls = true
 
 [params]
     author = "Dario Maiocchi"
-    info = "$TITLE=\"Free software | remote developer | pragmatic descendant of Linux/Unix culture | I try not to be a faker\""
+    info = "Free Software, remote developer with strong linux Culture | Painter"
     description = "Dario Maiocchi's personal website"
     keywords = "foss, lisp, linux, clojure and other stuff around software"
     footercontent = "free software, free thoughts"
@@ -30,6 +30,15 @@ canonifyurls = true
     icon = "fab fa-twitter fa-2x"
     weight = 3
     url = "https://twitter.com/DarioMaiocchi"
+
+[[params.social]]
+    name = "Instagram Paintings"
+    icon = "fab fa-instagram fa-2x"
+    weight = 2
+    url = "https://www.instagram.com/dario_maiocchi_art/"
+
+
+
 
 # Menu links
 [[menu.main]]
