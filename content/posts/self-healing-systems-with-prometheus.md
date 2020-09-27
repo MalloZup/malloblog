@@ -25,7 +25,7 @@ In this demo I will show how you can use the Prometheus stack to improve your sy
 I do simplify lot of things assuming you can setup prometehus/alertmanager and you can create an alert via prometehus ( plenty of doc upstream are avail)
 
 
-1) Install prometheus. In my setup I do openSUSE Linux but Prometheus binary and alertmanager are avail everywhere
+1) Install prometheus. In my setup I use  **openSUSE Linux** but Prometheus binary and alertmanager are avail everywhere.
 
 
 2) After you setup alertmanager and prometheus up and running, configure the alertmanager.
@@ -99,4 +99,4 @@ INFO[0019] handler called via prometheus alert
 
 Here we do have 3 alerts fired and handled by handler
 
-Now if you substitute the `print` function with your domain expertise! Have fun!
+Now substitute the `print` function with your domain expertise! Have fun!
