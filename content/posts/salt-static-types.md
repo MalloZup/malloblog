@@ -32,7 +32,8 @@ The formula states and pillar should be placed by the `rpm` in a well known plac
 
 ( for details about this check out: https://github.com/SUSE/saphanabootstrap-formula/pull/105)
 
-In addition, I researched how I could validate pillars with `golang` static types. And I find a nice way to do it, preserving also the cli and knowing pillar are **jinja**.
+In addition, I researched how I could validate pillars with `golang` static types. 
+The main problem was that pillar are jinja files, and they are changed dinamically via grains etc. For that see step 2).
 
 This pattern works well if you have control of your formula so you can  add your types incrementally when you add new vars.. For custom upstream formula you don't control it might doesn't work.
 
@@ -40,7 +41,7 @@ This pattern works well if you have control of your formula so you can  add your
 
 The functionality of the code is following:
 
-0) Pillars/States etc config is delegated to zypper.  (in my code they hardcoded to /usr/share/salt-formulas etc.
+0) Pillars/States etc config is delegated to zypper.  (in my code they are hardcoded to /usr/share/salt-formulas etc.)
 
 1) Create your structs golang from the pillar.yaml file
  Saltstack pillars are yaml  so you can autogenerate your structs easy.
