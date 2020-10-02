@@ -28,19 +28,19 @@ My approach isn't generic, since I focused on X formula, but  It should be just 
 
 ## Formula attributes on directory layout:
 
-The formula states and pillar should be placed by the `rpm` in a well known place so the CLI can retrieve. SO the filesystem layout is solved by the RPM package of the formula.
+The formula states and pillar should be placed by the `rpm` in a well known place so the CLI can retrieve. So this problem is solved/delegated to zypper, by the RPM package of the formula.
 
 ( for details about this check out: https://github.com/SUSE/saphanabootstrap-formula/pull/105)
 
 In addition, I researched how I could validate pillars with `golang` static types. And I find a nice way to do it, preserving also the cli and knowing pillar are **jinja**.
 
-This pattern works well if you have control of your formula so you add your types. For custom upstream formula you don't control it might doesn't work.
+This pattern works well if you have control of your formula so you can  add your types incrementally when you add new vars.. For custom upstream formula you don't control it might doesn't work.
 
 # How the code works
 
 The functionality of the code is following:
 
-0) The formula "foo" need to follow a packaging "API". Pillar are I delegated all the placement of the states/pillar to zypper.  ( for details about this check out: https://github.com/SUSE/saphanabootstrap-formula/pull/105)
+0) Pillars/States etc config is delegated to zypper.  (in my code they hardcoded to /usr/share/salt-formulas etc.
 
 1) Create your structs golang from the pillar.yaml file
  Saltstack pillars are yaml  so you can autogenerate your structs easy.
@@ -52,7 +52,7 @@ To my rescue I found out that I can call salt util function and convert jinja to
   // https://docs.saltstack.com/en/latest/ref/modules/all/salt.modules.slsutil.html#salt.modules.slsutil.renderer
         cmd := exec.Command("/usr/bin/salt-call", "--local", "slsutil.renderer", "default_renderer=jinja", formulaPillar)
 ```
-So basically there I just say to salt-call: convert me the jinja grain, into yaml.
+Basically there I just say to salt-call: convert me the jinja grain, into yaml.
 Since golang can read yaml with structs and create types, I can validate my pillars dinamically! ( it might seems obvious but is not)
 
 3) Once I do have validate the pillars, I can run the formula with a salt-call state.apply call.
