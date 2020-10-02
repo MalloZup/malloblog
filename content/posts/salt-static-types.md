@@ -23,7 +23,7 @@ That is why i was motivated to create an simple CLI for my specific context;
 
 zypper is providing and ensuring a state written via spec, salt-call does something similar but on the more higher level and with systems configuration.
 
-My approach isn't generic, since I focused on X formula, but  It should be just using `salt-call` and be local.
+My approach isn't generic, since I focused on X formula,  it is more a pattern. ( a generic executor of formula, could be implemented via salt-call )
 
 
 ## Formula attributes on directory layout:
