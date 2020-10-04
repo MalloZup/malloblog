@@ -46,19 +46,19 @@ In the real world, the skilled developers or maintainers cannot maintain/supervi
 No matter how you are passionated, accountable and think to be skilled developers, you will ship anyways bad API soon or later.
 **Simply** because your knowledge is limited. You need to reflect retrospectively.
 
-So soon or later your API will be broken, and removing it will be a **breaking change**. ( also how will come to this later.)
+So soon or later your API will be broken, and removing it will be a **breaking change**. ( I will come to this later.) 
 
 # Users don't care about the general picture, neither developers do it. * why api sucks
 
 In the real world , in lot of legacy code or opensource code, developers are incrementally creating an API satifsying their needs, or the  User needs, compromising the whole design.
 Time and effort is always the problem.
- -  people want to fix X feature in the shortest 
+People want to fix X feature in the shortest timeframe possible, with possibly less effort.
 
 A practical example:
 
 One of the project I'm involved in the opensource world, is the upstream project `terraform-libvirt`. ( https://github.com/dmacvicar/terraform-provider-libvirt)
 
-The API of libvirt is an XML, terraform the provider needs to map it to  HCL and terraform constructs. 
+Simplifying, the API conf of libvirt is an XML file where you define resource, terraform the provider needs to map this  to HCL and terraform constructs.  (that is also the most problematic thing)
 
 In the past we had, and also in the present lot of users which send us pull-request for introducing a new feature which will change the API.
 If we would merge this PRs the codebase will become un-maintainable. This is not about making people happy.
@@ -71,6 +71,8 @@ Some maintainers are just strategic, pushing some "showy" feature for beeing pro
 and implement just the "details". Some devs just simple left company, or somehow you join to X codebase in a phase where no one as anymore a clue what is going on.
 
 I think everyone is different, developers are human with their characters and organization. 
+
+The "core" of the problem, is that we cannot only rely on experience of people, but instead we need more thinking on release practices/knowledge methodologies.
 
 So to close the libvirt example, I think we are taking a rationale approach: trying to reviewing the PR as much we can, researching, trying to see the general picture. 
 There are still failure on this.
@@ -89,10 +91,13 @@ So in any case, overthinking or just creating features with a poor research or n
 
 This is also why API are bad in general. 
 
-But I think we can change this.
+But I think we can change this 
 
 
 # shifting the mental model:
+
+# Do we need to deprecate remove? Or when we need to do it
+WIP:
 
 
 # Semantic versioning is not the whole solution of the problem
