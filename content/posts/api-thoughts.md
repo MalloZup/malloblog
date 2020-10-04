@@ -83,7 +83,7 @@ So the 1 version of API will be 90% globally wrong. You can be defensive, you ca
 Developers increments feature on 4/5 monts, the API is there, and it becomes the "API" officially released. 
 Maybe some design choices was poor, and the API is simple exposing to much, which now you need to maintain or ship breaking changes afterwards.
 
-On the otherside over-abstracting things beforehands is always creating super-complicated code. You can't be generic before, making code generic is something comes after you.
+On the otherside over-abstracting things beforehands is always creating super-complicated code. You can't be generic before, making code generic is something comes after you have done an implementation.
 
 So in any case, overthinking or just creating features with a poor research or not enough time, will bring you to fail.
 
@@ -104,3 +104,11 @@ WIP:
 WIP:
 
 # Other solutions
+
+
+
+# Sources:
+
+- Rich Hickey Spec-ulation ( https://www.youtube.com/watch?v=oyLBGkS5ICk&feature=youtu.be&t=4177)
+
+- wip
