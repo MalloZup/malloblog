@@ -68,8 +68,8 @@ Obviously as many opensource contributors, they just need to fix their own usage
 It should be the role of an experienced maintainer to advise the contributors to change the code and adapt it to be generic to the codebase.
 Allthough even maintainers can fail. We can't expect that all maintainers will invest the same "passion", accuracy, or even if they do , they will fail.
 Some maintainers are just strategic, pushing some "showy" feature for beeing promoted or playing the "principal engineer" to stackholders and send to the hell to the "bare mortal" engineers who will need to live with that messy code,
-and implement just the "details". Some devs just simple left company, or somehow you join to X codebase in a phase where no one as anymore a clue what is going on.
-
+and implement just the "details". ( see the "tornado developer' definition on A Philosophy of Software Design book).
+Some devs just simple left company, or somehow you join to X codebase in a phase where no one as anymore a clue what is going on.
 I think everyone is different, developers are human with their characters and organization. 
 
 The "core" of the problem, is that we cannot only rely on experience of people, but instead we need more thinking on release practices/knowledge methodologies.
@@ -116,4 +116,5 @@ WIP:
 
 - Rich Hickey Spec-ulation ( https://www.youtube.com/watch?v=oyLBGkS5ICk&feature=youtu.be&t=4177)
 
-- wip
+- A Philosophy of Software Design, John Ousterhout 
+- 
