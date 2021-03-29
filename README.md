@@ -19,3 +19,8 @@ For the future me to remember things :)
 Go to `public` and commit and push changes
 
 the webpage is here : https://github.com/MalloZup/MalloZup.github.io
+
+
+## Creating Achievements:
+
+`hugo new ac/some-newstuff.md`

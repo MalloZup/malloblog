@@ -1,6 +1,6 @@
 baseURL = "https://mallozup.github.io/"
 languageCode = "en-us"
-title = "(def Think humble, think free) --> "
+title = "Dario Maiocchi"
 theme = "coder"
 
 paginate = 20
@@ -8,7 +8,7 @@ canonifyurls = true
 
 [params]
     author = "Dario Maiocchi"
-    info = "Free Software, remote developer with strong linux Culture | Painter"
+    info = "Critical thinker, Senior software developer| Painter"
     description = "Dario Maiocchi's personal website"
     keywords = "foss, lisp, linux, clojure and other stuff around software"
     footercontent = "free software, free thoughts"
@@ -37,11 +37,21 @@ canonifyurls = true
     weight = 2
     url = "https://www.instagram.com/dario_maiocchi_art/"
 
-
+[[params.social]]
+    name = "LinkedIn"
+    icon = "fab fa-linkedin"
+    weight = 4
+    url = "https://www.linkedin.com/in/dario-maiocchi-1290b6155/"
 
 
 # Menu links
 [[menu.main]]
-    name = "Blog"
+    name = "Technical Blog"
     weight = 1
     url  = "/posts/"
+[[menu.main]]
+    name = "Achivements"
+    weight = 1
+    url  = "/ac/"
+
+
