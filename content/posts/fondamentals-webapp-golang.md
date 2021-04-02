@@ -13,17 +13,17 @@ series = []
 # Intro:
 
 I will write in this post about some useful concept you need for building web application in golang.
-Also I will compare such approaches to other languages and upstream approaches from my developer carreer into opensource world.
+Also I will compare such approaches to other languages and upstream approaches from my developer experience.
 
 # 1) Web toolkit are the golang minimalist answer against complexity of frameworks
 
 Choosing a framework is a safe choice. People has already solved the problem for you. Really ?? It depends.
-Adopting a framework can be quite considerable risk. It offers you an huge amount of feature thaty perhaps you will even don't need.
-This is why also application are built as microservice patterns, instead of monolith frameworks.
+Adopting a framework can be quite considerable risk. It offers you an huge amount of feature that perhaps you will even don't need.
+This is why also some applications are built with a  microservice pattern, instead of monolith frameworks. (not going into the details on the topic)
 
 Within a framework you embark in a mental pattern, bugs and coding style that you might don't know if it fits for you. Upgrade/update becomes problem.
 
-As pro for frameworks, it is true that one don't want  to reinvent the wheel each time. 
+As pro for frameworks, it is true that one don't want to reinvent the wheel each time. 
 But as contra, you inherit a huge complexity and bugs for free.
 
 For these reasons, in golang minimalism, has emerged the concept of "web toolkit".
@@ -42,10 +42,9 @@ Both are safe choices because they aren't a framework and they use the standard 
 
 # 2) Templating and base templates in golang:
 
-
 Every modern web-application uses templating.
 In short, templates allow you to combine the HTML frontend techs with the backend data. Templates are reusable part html etc, that you can program.
- In rails you have a variety of choices, like erb, and others.
+In rails you have a variety of choices, like erb, and others.
 
 In go you can use the standard `html` templating.
 
@@ -59,7 +58,6 @@ The base template contains the basic layout, and the child one will overwrite it
 The working code, you can find it here: https://github.com/MalloZup/console-for-sap-applications/tree/chi-lib/web
 
 Important, while I discuss the components here, check also the templates directory: https://github.com/MalloZup/console-for-sap-applications/tree/chi-lib/web/templates
-
 
 We can decompose the example in 3 components:
 
@@ -258,5 +256,3 @@ func IndexHandler(templates map[string]template.Template) http.HandlerFunc {
 	}
 }
 ```
-
-
